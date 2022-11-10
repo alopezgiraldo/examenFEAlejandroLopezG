@@ -10,7 +10,7 @@ import Posteos from './components/Posteos';
 
 function App() {
   const [totalLikes, setTotalLikes] = useState(0)
-  function sumarTotalLikes () {
+  function sumarTotalLikes (sumaLikes) {
     setTotalLikes(totalLikes + 1)
   }
 

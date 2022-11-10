@@ -8,13 +8,13 @@ import data from './data.json'
 // MÉTODOS: Posteos no requiere de métodos.
 // PROPS: Posteos recibe el método para aumentar el estado de App y se lo pasa a cada uno de sus hijos junto con el resto de las props que necesitan.
 
-export default function Posteos() {
+export default function Posteos(props) {
   return (
     <div className='container'>
       {/* renderizamos los Post aquí */
         data.map((objeto) => {
           return (
-            <Post key = {objeto.id} titulo = {objeto.titulo} descripcion = {objeto.texto}/>
+            <Post key = {objeto.id} titulo = {objeto.titulo} descripcion = {objeto.texto} sumarTotalLikes = {props.sumarTotalLikes}/>
           )
         })
       }

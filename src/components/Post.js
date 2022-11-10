@@ -16,7 +16,8 @@ export default function Post(props) {
   const [likesPosteo, setLikesPosteo] = useState(0);
   function sumarAPosteo () {
     setLikesPosteo(likesPosteo + 1)
-    console.log(props.titulo);
+    props.sumarTotalLikes(props.likesPosteo)
+    console.log("Suma 1 like: " + props.titulo);
   }
   return (
     <div className='posteo'>
